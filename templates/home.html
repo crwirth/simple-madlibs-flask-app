@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MADLIBS</title>
+</head>
+<body>
+    <h1>MADLIBS</h1>
+    <form action="/story">
+        {% for prompt in prompts %}
+        <p>{{prompt}}
+            <input placeholder="{{prompt}}" name="{{prompt}}">
+        </p>
+        {% endfor %}
+        <button>Submit!</button>
+    </form>
+</body>
+</html>
